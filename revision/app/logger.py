@@ -1,6 +1,7 @@
 from logtail import LogtailHandler
 import logging
 import config
+import sys
 
 def get_logger():
     logger = logging.getLogger(__name__)
@@ -14,9 +15,6 @@ def get_logger():
 
     logging.error('Akljfgal12')
     stream_handler = logging.StreamHandler(sys.stdout)
-    formatter = logging.Formatter(
-        fnt=
-    )
 
     logger.addHandler(handler)
 
