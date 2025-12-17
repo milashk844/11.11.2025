@@ -1,6 +1,6 @@
 import datetime
 import time
-
+"""
 def timer(func):
     def wrapper(*args, **kwargs):
         start = datetime.datetime.now()
@@ -17,3 +17,14 @@ def demo_func():
     return "Готово!"
 
 print(demo_func())
+"""
+
+def round_result(ndigits: int):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            result = func(*args, **kwargs)
+            if isinstance(result(int, float)):
+                return round(result, ndigits)
+            return result
+        return wrapper
+    return decorator
